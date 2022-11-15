@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../navigation/drawer/drawer_pages/profile_page.dart';
 import 'accounts.dart';
 import 'button_tile.dart';
 import 'package:reference_development/home_page/grid_view/events.dart';
@@ -22,17 +21,26 @@ class ButtonWidget extends StatelessWidget {
               children: <Widget>[
                 Button_tile(
                   'Events',
-                  () => {},
+                  () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Events())),
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => Events(),
+                    //   ),
+                    // ),
+                  },
                 ),
                 Button_tile(
                   'A/C',
                   () => {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (BuildContext context) => Account(),
-                    //   ),
-                    // )
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => Account(),
+                      ),
+                    )
                   },
                 ),
                 Button_tile(
@@ -41,7 +49,7 @@ class ButtonWidget extends StatelessWidget {
                           // Navigator.push(
                           //   context,
                           //   MaterialPageRoute(
-                          //     builder: (context) => Account(),
+                          //     builder: (context) => Date(),
                           //   ),
                           // ),
                         }),

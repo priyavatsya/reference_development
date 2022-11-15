@@ -39,7 +39,7 @@ void main() {
     });
 
     test('Invalid Confirm Password Test', () {
-      String result = FieldValidator.validateConfirmPassword('132');
+      String result = FieldValidator.validateConfirmPassword('123');
       expect(result, 'Password did not match');
     });
 

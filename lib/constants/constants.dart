@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AppColors {
   static const Color PRIMARY_COLOR = Color(0xFFFFFFFF);
@@ -22,6 +21,8 @@ class AppColors {
   static const Color PRIMARY_GREY = Color(0xFFEEEEEE);
   static const Color PRIMARY_DARK_LIGHT1 = Color(0xFF212121);
   static const Color DARK_LIGHT = Color(0xFFCFD8DC);
+  static const Color ORANGE = Color(0xFFFF8a65);
+  static const Color GREY = Color(0xFFBDBDBD);
 }
 //
 // class ApiConstants {
@@ -50,6 +51,12 @@ const kRectangle = RoundedRectangleBorder(
   ),
 );
 
+const kListDecoration = BoxDecoration(
+    color: AppColors.PRIMARY_COLOR,
+    borderRadius: BorderRadius.all(
+      Radius.circular(10),
+    ));
+
 final emailValue = (value) {
   if (value!.length == 0) {
     return "Email cannot be empty";
@@ -73,10 +80,18 @@ final passwordValue = (value) {
   }
 };
 
-final Height1 = 20.0;
-final Height2 = 50.0;
-final Height3 = 35.0;
-final FontSize1 = 20.0;
-final FontSize2 = 15.0;
-final FontSize3 = 40.0;
-final Padding_1 = EdgeInsets.all(10.0);
+const Height1 = 20.0;
+const Height2 = 50.0;
+const Height3 = 35.0;
+const Height4 = 100.0;
+const Height5 = 12.0;
+
+const Width1 = 100.0;
+
+const FontSize1 = 20.0;
+const FontSize2 = 15.0;
+const FontSize3 = 40.0;
+const FontSize4 = 25.0;
+
+const Padding_1 = EdgeInsets.all(10.0);
+const Padding_2 = EdgeInsets.all(5.0);

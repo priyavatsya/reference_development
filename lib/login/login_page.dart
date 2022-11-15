@@ -2,7 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:reference_development/constants/constants.dart';
-import '../home_page/home_screen.dart';
+import '../navigation/bottom_navigatn/bottomnavigatn_.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import '../register/register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -190,10 +191,16 @@ class _LoginPageState extends State<LoginPage> {
           email: email,
           password: password,
         );
+        Fluttertoast.showToast(
+          msg: "Login Sucessful !!",
+          toastLength: Toast.LENGTH_LONG,
+          fontSize: FontSize1,
+          backgroundColor: AppColors.PRIMARY_COLOR_DARK1,
+        );
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(),
+            builder: (context) => BottomBar(),
           ),
         );
       } on FirebaseAuthException catch (e) {
