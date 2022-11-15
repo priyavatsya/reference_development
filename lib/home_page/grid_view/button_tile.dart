@@ -4,9 +4,9 @@ import 'package:reference_development/constants/constants.dart';
 
 class Button_tile extends StatelessWidget {
   final String text;
-  final VoidCallback onTap;
+  final VoidCallback onPressed;
 
-  Button_tile(this.text, this.onTap);
+  Button_tile(this.text, this.onPressed);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,10 @@ class Button_tile extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: const EdgeInsets.all(7),
+      padding: Padding_1,
       child: InkWell(
         splashColor: AppColors.PRIMARY_COLOR2,
-        onTap: onTap,
+        onTap: onPressed,
         child: Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,8 +34,8 @@ class Button_tile extends StatelessWidget {
                   //   style: kLabelStyle,
                   // ),
                   SizedBox(
-                    height: height * 0.18,
-                    width: width * 0.27,
+                    height: height * 0.16,
+                    width: width * 0.25,
                     child: ElevatedButton(
                       child: Text(
                         text,

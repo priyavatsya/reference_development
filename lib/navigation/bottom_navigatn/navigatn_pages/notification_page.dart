@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-
-import '../../drawer/drawer_widget.dart';
-import '../btmNavigation.dart';
+import 'package:reference_development/constants/constants.dart';
 
 class Notification extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
-        drawer: DrawerWidget(),
         appBar: AppBar(
           title: Text('Notification'),
+          leading: Icon(
+            Icons.menu,
+          ),
           centerTitle: true,
-          backgroundColor: Colors.deepOrange[300],
+          backgroundColor: AppColors.ORANGE,
         ),
-        bottomNavigationBar: BtmNavigation(),
       );
 }

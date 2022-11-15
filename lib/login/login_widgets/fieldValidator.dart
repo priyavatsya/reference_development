@@ -31,7 +31,7 @@ class FieldValidator {
       return 'Please re-enter the password';
     }
 
-    if (validatePassword != validateConfirmPassword) {
+    if (value != validatePassword) {
       return 'Password did not match';
     }
     return '';
